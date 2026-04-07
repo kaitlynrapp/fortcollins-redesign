@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>City of Fort Collins - Keyboard Navigation Fix</title>
+  <style>
+    a:focus, button:focus {
+      outline: 3px solid #e87722;
+      outline-offset: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      padding: 0;
+    }
+    .events-section a {
+      display: block;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" style="position:absolute;left:-9999px">Skip to main content</a>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#">Activities</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Government</a></li>
+      <li><a href="#">Business</a></li>
+    </ul>
+  </nav>
+  <main id="main-content">
+    <h1>Upcoming Events</h1>
+    <section class="events-section" aria-label="City events">
+      <h2>This Week</h2>
+      <a href="#">City Council Meeting - April 8</a>
+      <a href="#">Farmer's Market - April 12</a>
+      <a href="#">Trail Cleanup Volunteer Day - April 13</a>
+    </section>
+  </main>
+</body>
+</html>
