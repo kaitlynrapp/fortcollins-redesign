@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US">
+<!--<![endif]-->
+<head>
+	<!-- Published by OpenCities, 1.37.1.0 -->
+
+    
+        
+    
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="theme-color" content="#FFFFFF"/>
+    <title>Home City of Fort Collins</title>
+	<meta name="generator" content="OpenCities - https://granicus.com/product/opencities" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Using mobile-web-app-capable for now to enable full-screen experience on supported platforms -->
+    <!-- Note: This tag works mainly on Android Chrome. It does NOT enable full-screen mode on iOS Safari. -->
+    <!-- For iOS, the correct tag is: <meta name="apple-mobile-web-app-capable" content="yes"> -->
+    <!-- TODO: Monitor for updated meta tag standards from Apple or other browser vendors -->
+    <meta name="mobile-web-app-capable" content="yes" />
+        <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.fortcollins.gov/Home" />
+    <meta property="og:title" content="Official Website of the City of Fort Collins" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Official Website of the City of Fort Collins" />
+    <link rel="canonical" href="https://www.fortcollins.gov/Home" />
+
+    
+    <link rel="icon" type="image/png" href="/files/ocfavicon/City/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/files/ocfavicon/City/favicon.svg" />
+<link rel="shortcut icon" href="/files/ocfavicon/City/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/files/ocfavicon/City/apple-touch-icon.png" />
+<link rel="manifest" href="/files/ocfavicon/City/site.webmanifest" />
+
+    <!-- Preconnecting to Google Fonts servers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Defer Roboto font loading to avoid render-blocking -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const robotoLink = document.createElement('link');
+            robotoLink.rel = 'stylesheet';
+            robotoLink.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap';
+            document.head.appendChild(robotoLink);
+        });
+    </script>
+
+    <style>
+        .gm-style, .gm-style * {
+            font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Arial, sans-serif !important;
+        }
+    </style>
+
+    <script>
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "js");
+    </script>
+    <!-- this is custom font -->
+    
+        
+            <script type="text/javascript">
+                window.__oc_flags_ImprovedBreakpointEventHandling = true;
+            </script>
+            
+        
+    
+    
+    
+        <script type="text/javascript">
+            var __metaQueryBreakpoints = {
+                'sc-size-4': '(max-width: 480px)',
+                'sc-size-3': '(min-width: 480px) and (max-width: 768px)',
+                'sc-size-2': '(min-width: 768px) and (max-width: 992px)',
+                'sc-size-1': '(min-width: 992px)'
+            }
+
+            var __ocSizePoints = [
+                { min: 0, name: 'sc-size-4' },
+                { min: 480, name: 'sc-size-3' },
+                { min: 768, name: 'sc-size-2' },
+                { min: 992, name: 'sc-size-1' }
+            ];
+
+        </script>
+    
+
+    <!-- Framework Section -->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/files/templates/00000000-0000-0000-0000-000000000000/403381f7-b48f-4571-be47-bfe5e32dd4e7/v/158/jquery-3.7.1.min.js?seamlessts=639087853213337640" ><\/script>')</script>
+
+    <!--Google Maps API Loader – Improved Version to avoid Warning
+    This script loads the Google Maps JavaScript API using a dynamic and async method.
+    It replaces the old static <script> tag to avoid performance warnings from Google.
+
+    Dynamically creates the <script> tag with loading = async for better performance
+    Builds the API URL with required libraries(places, geometry, marker, geocoding)
+    Uses a Promise and callback(google.maps.__ib__) to confirm when the script is ready
+
+    It Avoids Google’s warning about direct script loading
+    Improves page load speed by loading the API asynchronously-->
+
+    
+        <script>
+            (function (root) {
+                root.OpenCities = root.OpenCities || {};
+                if (!root.OpenCities.GoogleMapsLoader) {
+                    root.OpenCities.GoogleMapsLoader = {
+                        _cbs: [],
+                        _ready: false,
+                        onReady: function (cb) {
+                            if (this._ready) { try { cb(); } catch (e) { console.error(e); } }
+                            else if (typeof cb === 'function') this._cbs.push(cb);
+                        },
+                        _fire: function () {
+                            if (this._ready) return;
+                            this._ready = true;
+                            var q = this._cbs.splice(0);
+                            for (var i = 0; i < q.length; i++) {
+                                try { q[i](); } catch (e) { console.error(e); }
+                            }
+                        }
+                    };
+                }
+            })(window);
+
+            (g => {
+                var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__",
+                    m = document, b = window;
+                b = b[c] || (b[c] = {});
+                var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams,
+                    u = () => h || (h = new Promise(async (resolve, reject) => {
+                        a = m.createElement("script");
+                        e.set("libraries", [...r] + "");
+                        for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+                        e.set("callback", c + ".maps." + q);
+                        a.src = "https://maps." + c + "apis.com/maps/api/js?" + e.toString();
+                        a.loading = "async";
+                        a.async = true;
+                        a.defer = true;
+                        d[q] = resolve;
+                        a.onerror = () => reject(Error(p + " could not load."));
+                        a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+                        m.head.append(a);
+                    }));
+                if (d[l]) {
+                    console.warn(p + " only loads once. Ignoring duplicate load.");
+                } else {
+                    d[l] = (f, ...n) => (r.add(f), u().then(() => d[l](f, ...n)));
+                }
+            })({
+                key: "AIzaSyCYd0bOjA13a9CO-Hr1H3kewFDfblhR02U",
+                v: "quarterly"
+            });
+
+            (async () => {
+                try {
+                    if (!google?.maps?.importLibrary) return;
+
+                    if (!window.OpenCities.__mapsLibsPromise) {
+                        window.OpenCities.__mapsLibsPromise = Promise.all([
+                            google.maps.importLibrary('maps'),
+                            google.maps.importLibrary('places'),
+                            google.maps.importLibrary('geocoding'),
+                            google.maps.importLibrary('marker'),
+                            google.maps.importLibrary('geometry')
+                        ]);
+                    }
+                    await window.OpenCities.__mapsLibsPromise;
+
+                    if (window.OpenCities?.GoogleMapsLoader) {
+                        window.OpenCities.GoogleMapsLoader._fire();
+                    }
+                } catch (err) {
+                    console.error('Google Maps failed to initialise', err);
+                }
+            })();
+        </script>
+    
+    <script src="/files/templates/00000000-0000-0000-0000-000000000000/403381f7-b48f-4571-be47-bfe5e32dd4e7/v/158/modernizr.custom.710f3bf.js?seamlessts=639087853213337640" defer></script>
+    
+    <!--// End Framework Section -->
+    <!-- OpenCities Section -->
+    <script>
+        var OpenCities = OpenCities || {};
+        OpenCities.Paths = {
+            SiteTemplate: '/files/templates/00000000-0000-0000-0000-000000000000/403381f7-b48f-4571-be47-bfe5e32dd4e7/v/158/',
+            ThemePath: '/files/templates/00000000-0000-0000-0000-000000000000/403381f7-b48f-4571-be47-bfe5e32dd4e7/v/158/'
+        };
+    </script>
+    <script src='/ocapi/f0dcff91-5a12-4a68-a9f9-4359418ddf98/en-US/websitesettings.js'></script>
+    <script src="/files/templates/00000000-0000-0000-0000-000000000000/403381f7-b48f-4571-be47-bfe5e32dd4e7/v/158/oc_head.js?applied=20251211073855"></script>
+    <!-- Script Combine. To enter debug mode for this browser session, enter OcScriptCombineDebug=true as a querystring -->
+<link href="/files/oc-templates/00000000-0000-0000-0000-000000000000/403381f7-b48f-4571-be47-bfe5e32dd4e7/v/158/oc_grid.css~oc_grid_s1.css~oc_style.css~oc_wizard_style.css~oc_main.css~oc_forms.css~oc_wizard.css~oc_wizard_menu.css~oc_main_s1.css~oc_wizard_s1.css~oc_wizard_menu_s1.css~OcScriptCombine_Minify0?uniqueid=20251211073855" rel="stylesheet" type="text/css">
+    <!-- Script Combine. To enter debug mode for this browser session, enter OcScriptCombineDebug=true as a querystring -->
+<link href="/files/oc-templates/00000000-0000-0000-0000-000000000000/403381f7-b48f-4571-be47-bfe5e32dd4e7/v/158/client_style.css~client.css~client_menu.css~client_s1.css~client_menu_s1.css~client_forms.css~OcScriptCombine_Minify0?uniqueid=20251211073855" rel="stylesheet" type="text/css">
+    <style type="text/css">.content-outer-container
+{
+    background-image:url('/files/sharedassets/city/v/1/04-images-amp-icons/homepage-headers/fc_header_aeria2025l.jpg?w=480');
+    
+}
+
+@media (min-width: 480px)
+{
+    .content-outer-container
+    {
+      background-image:url('/files/sharedassets/city/v/1/04-images-amp-icons/homepage-headers/fc_header_aeria2025l.jpg?w=768');
+    }
+}
+@media (min-width: 768px)
+{
+    .content-outer-container
+    {
+      background-image:url('/files/sharedassets/city/v/1/04-images-amp-icons/homepage-headers/fc_header_aeria2025l.jpg?w=992');
+    }
+}
+@media (min-width: 992px)
+{
+    .content-outer-container
+    {
+      background-image:url('/files/sharedassets/city/v/1/04-images-amp-icons/homepage-headers/fc_header_aeria2025l.jpg');
+    }
+}
+@media (min-width: 1280px)
+{
+    .content-outer-container
+    {
+      background-image:url('/files/sharedassets/city/v/1/04-images-amp-icons/homepage-headers/fc_header_aeria2025l.jpg');
+    }
+}
+@media (min-width: 1920px)
+{
+    .content-outer-container
+    {
+      background-image:url('/files/sharedassets/city/v/1/04-images-amp-icons/homepage-headers/fc_header_aeria2025l.jpg');
+    }
+}
+        </style><script>
+(function (BackgroundSettings, $, undefined) {
+    BackgroundSettings.initialise = function () {
+        this.Application = {"CSSSelector":".content-outer-container","EnableFade":false};
+    };
+} (OpenCities.BackgroundSettings = OpenCities.BackgroundSettings || {}, jQuery));
+OpenCities.BackgroundSettings.initialise();
+</script>
+    
+    <!-- Script Combine. To enter debug mode for this browser session, enter OcScriptCombineDebug=true as a querystring -->
+<link href="/files/oc-templates/00000000-0000-0000-0000-000000000000/403381f7-b48f-4571-be47-bfe5e32dd4e7/v/158/oc_print.css~client_print.css~OcScriptCombine_Minify0?uniqueid=20251211073855" rel="stylesheet" type="text/css" media="print">
+    <!-- Script Combine. To enter debug mode for this browser session, enter OcScriptCombineDebug=true as a querystring -->
+<script src="/files/oc-templates/00000000-0000-0000-0000-000000000000/403381f7-b48f-4571-be47-bfe5e32dd4e7/v/158/external_plugins.js~oc_form_helper.js~oc_main.js~plugins.js~oc_main_init.js~OcScriptCombine_Minify0?uniqueid=20251211073855" defer="true"></script>
+    
+    
+
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="DYTCK-JM9C8-ED4EP-C3GGK-Z575H",function(){function e(){if(!r){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.appendChild(e),r=!0}}function t(e){r=!0;var n,t,a,i,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",i=(a.frameElement||a).style,i.width=0,i.height=0,i.border=0,i.display="none",o.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void 0;",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=14,window.BOOMR.url=n+"DYTCK-JM9C8-ED4EP-C3GGK-Z575H";var i=document.currentScript||document.getElementsByTagName("script")[0],o=i.parentNode,r=!1,d=document.createElement("link");if(d.relList&&"function"==typeof d.relList.supports&&d.relList.supports("preload")&&"as"in d)window.BOOMR.snippetMethod="p",d.href=window.BOOMR.url,d.rel="preload",d.as="script",d.addEventListener("load",e),d.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!r)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.appendChild(d);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="qcfectyxyj7tq2ovniyq-f-e3c34bacb-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1929113","ak.ai":parseInt("1075935",10),"ak.ol":"0","ak.cr":16,"ak.ipv":4,"ak.proto":"h3","ak.rid":"84050dd","ak.r":47159,"ak.a2":n,"ak.m":"dscb","ak.n":"essl","ak.bpcip":"128.138.65.0","ak.cport":53096,"ak.gh":"23.200.72.56","ak.quicv":"0x00000001","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"","ak.t":"1775594033","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==Onwb+xdI2VN29SrRrONHbAFFqTAJeL8DRyALFAxFe5kewWm9nqM7p4WAy5jxTGQCjcUw5f36kooGu3nguE/KMV6fIMwgbZafYa/4HGfWXX51yE4IetrTFTn89etqZADQ2dLkfpqRApS1rsaA/5F2uPiNt7WldxyIIvvDj2Xe2jOieb9iHxse+W0QLk/j3YyQELS+rKOMq+ce3eWBS6V+oVyl6q3PHMHyOOL9p+N/9S3M5G4R8SiAbjeWdCs4qASwnXE0VMvigbkUseEs/UDQOA4Q7+Hlh88WLcjcXxJTgGazHcGX7UMB6143xIDBQozGLIA/r8M6z8qVxpkAhQpKqncNF3NRF1mDkI5W6MM+8hPfP6QxpZ1GLONWtpN3BUgfm0nh6qytePLe9yG1Ay5u/diVp4sfa8rKC83xGvxFcxI=","ak.pv":"295","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body class="body layout-modern  site-search-always-visble  content-type-oc-profile content-template-oc-default group-template-oc-empty-with-default-header page-name-home page-sequence-1 page-depth-1 page-section-1 website-type-primary device-desktop " id="body-top">
+    <form name="mainForm" method="post" action="/Home" id="mainForm">
+<div>
+<input type="hidden" name="ctl04_seamless_script_manager_TSM" id="ctl04_seamless_script_manager_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__SEAMLESSVIEWSTATE" id="__SEAMLESSVIEWSTATE" value="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" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['mainForm'];
+if (!theForm) {
+    theForm = document.mainForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=3nEBjeIG6IxWnSMbtWGG70aXWUYvx5zQYnvGW59_xF2BpHMe0VKHbUYFH4AASbetANuQ9VM1F0WmScuXxow1rCYqN59JqmYjXEHARuSuI-81&amp;t=638901320248157332" type="text/javascript"></script>
+
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl04_seamless_script_manager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-GB%3aa8328cc8-0a99-4e41-8fe3-b58afac64e45%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=cB93KO8LNP9KDw2rZIN0Rv9cqPwM8n3Qlnr_Jc2ipJ-jmRcD-bEjTQ74beWTlA98brJXUhaCFBGomH1UCWt96ROxaMdeLxEyXu043BEd_A9tkCOMZP5KACYRkDlFW2rZ_m_LPF3RI8g0vMSr_Zgh0o1mNtpdteEiTQ8K4vnj94IX_c_gQ6VgEYlH_AJR_sHKwfNAWU_cclP_iCkfWoEuac8vLqpcEq8qxiWse-lJg-xzEJXhRULvolDev87uyufsEx69soKEwA5f6aOJKKgaU3Mmzm9Wryyw8lHSoVPrutsP2WsF3akF6EPgQxzKybUT6r1STtC1BN_bj_J9P9SZnZNTXmSrnisXKlBbB3-lgTzIFqcxncb0CncWPzI49_Agm59VltsHgjgRKjPM-mL-73GATWywxG-lqprG7psnKJPgWSINNIK23kNwwH834ZEI0" type="text/javascript"></script>
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl04_seamless_script_manager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bOpenCities.CustomControls%3aen-GB%3aa840b94c-5788-4488-8732-cb7007c44bfc%3a8e1d32bf" type="text/javascript"></script>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl04$seamless_script_manager', 'mainForm', [], [], [], 90, '');
+//]]>
+</script>
+
+<script type="text/javascript">
+    try{
+        function SeamlessEndRequestHandler(sender, args) {
+            try {
+                var dataItems = args.get_dataItems();
+                if(dataItems.ctl04_seamless_script_manager)
+                    document.getElementById('__SEAMLESSVIEWSTATE').value = dataItems.ctl04_seamless_script_manager;
+            }
+            catch (e) { }
+        }
+
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(SeamlessEndRequestHandler);
+    }
+    catch (e) { }
+</script>
+
+    <div class="unsupported-browser-warning js-element"></div>
+    
+    <div hidden>
+        <span id="new-window-0">opens in new tab or window </span>
+    </div>
+    <div class="overlay-container"></div>
+    
+    <div class="background-container">
+        <div class="page-container">
+            <!-- OC Layout Element GROUP TEMPLATE -->
+            <!--groupTemplateStart--><div id="skip-to-content-container">
+        <a href='#main-content' class="visuallyhidden focusable" id='skip-to-content-link'>Skip to main content</a>
+    </div>
+            <header>
+            
+            <div class="toolbar-outer-container">
+  <div class="toolbar-inner-container clearfix">
+    <div class="toolbar-item toolbar-quicklinks toolbar-display-dropdown">
+	<button type="button" aria-controls="toolbar-quicklinks-drop-down" aria-expanded="false" class="toolbar-button toolbar-button-quicklinks js-element"><span>Quick Links</span><i aria-hidden="true"></i></button>	
+	<div id="toolbar-quicklinks-drop-down" class="toolbar-drop-down toolbar-quicklinks-drop-down clearfix">
+		<ul>
+		  <li><a href="https://www.fortcollins.gov/Government/Contact-Us" class="oc-icon-b oc-i--none link-type-internal"><span>Contact Us</span></a></li><li><a href="https://www.facebook.com/fortcollinsgov" class="oc-icon-b oc-i-facebook link-type-external link-hide-text" target="_blank"><span>Facebook</span></a></li><li><a href="https://www.instagram.com/fortcollinsgov/" class="oc-icon-b oc-i-instagram link-type-external link-hide-text" target="_blank"><span>Instagram</span></a></li><li><a href="https://x.com/fortcollinsgov" class="oc-icon-b oc-i-x link-type-external link-hide-text" target="_blank"><span>X</span></a></li>
+		</ul>
+	</div>
+</div><div class="toolbar-item toolbar-language notranslate toolbar-display-dropdown"><div class="no-js-element">
+		  <ul>
+		    <li><a href="https://www.fortcollins.gov/Home?oc_lang=en-US" class="lang-item lang-en-us" data-translate-to="en-us" lang="en-US">English (United States)<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=es" class="lang-item lang-es" data-translate-to="es" lang="en">Spanish<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=ar" class="lang-item lang-ar" data-translate-to="ar" lang="en">Arabic<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=zh-CN" class="lang-item lang-zh-cn" data-translate-to="zh-cn" lang="en">Chinese (Simplified)<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=zh-TW" class="lang-item lang-zh-tw" data-translate-to="zh-tw" lang="en">Chinese (Traditional)<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=fr" class="lang-item lang-fr" data-translate-to="fr" lang="en">French<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=de" class="lang-item lang-de" data-translate-to="de" lang="en">German<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=it" class="lang-item lang-it" data-translate-to="it" lang="en">Italian<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=ko" class="lang-item lang-ko" data-translate-to="ko" lang="en">Korean<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=pl" class="lang-item lang-pl" data-translate-to="pl" lang="en">Polish<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=pt" class="lang-item lang-pt" data-translate-to="pt" lang="en">Portuguese<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=pa" class="lang-item lang-pa" data-translate-to="pa" lang="en">Punjabi<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=ru" class="lang-item lang-ru" data-translate-to="ru" lang="en">Russian<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=tl" class="lang-item lang-tl" data-translate-to="tl" lang="en">Tagalog (Filipino)<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=vi" class="lang-item lang-vi" data-translate-to="vi" lang="en">Vietnamese<span class="visuallyhidden"> Select this as your preferred language</span></a></li>
+          </ul>
+		</div>
+	<button type="button" aria-controls="toolbar-language-drop-down" aria-expanded="false" class="toolbar-button toolbar-button-language js-element">  
+        <span class="current-language">
+            Select a language to translate to
+		</span>
+		<i aria-hidden="true"></i>
+	</button>
+	<div id="toolbar-language-drop-down" class="toolbar-drop-down toolbar-language-drop-down js-element clearfix">
+		<ul>
+		    <li><a href="https://www.fortcollins.gov/Home?oc_lang=en-US" class="lang-item lang-en-us" data-translate-to="en-us" lang="en-US">English (United States)<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=es" class="lang-item lang-es" data-translate-to="es" lang="en">Spanish<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=ar" class="lang-item lang-ar" data-translate-to="ar" lang="en">Arabic<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=zh-CN" class="lang-item lang-zh-cn" data-translate-to="zh-cn" lang="en">Chinese (Simplified)<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=zh-TW" class="lang-item lang-zh-tw" data-translate-to="zh-tw" lang="en">Chinese (Traditional)<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=fr" class="lang-item lang-fr" data-translate-to="fr" lang="en">French<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=de" class="lang-item lang-de" data-translate-to="de" lang="en">German<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=it" class="lang-item lang-it" data-translate-to="it" lang="en">Italian<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=ko" class="lang-item lang-ko" data-translate-to="ko" lang="en">Korean<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=pl" class="lang-item lang-pl" data-translate-to="pl" lang="en">Polish<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=pt" class="lang-item lang-pt" data-translate-to="pt" lang="en">Portuguese<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=pa" class="lang-item lang-pa" data-translate-to="pa" lang="en">Punjabi<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=ru" class="lang-item lang-ru" data-translate-to="ru" lang="en">Russian<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=tl" class="lang-item lang-tl" data-translate-to="tl" lang="en">Tagalog (Filipino)<span class="visuallyhidden"> Select this as your preferred language</span></a></li><li><a href="https://www.fortcollins.gov/Home?oc_lang=vi" class="lang-item lang-vi" data-translate-to="vi" lang="en">Vietnamese<span class="visuallyhidden"> Select this as your preferred language</span></a></li>
+        </ul>
+	</div></div>
+  </div>
+</div>
+            <div class="header-outer-container">
+    <div class="header-container header-layout-4  clearfix">
+			<div class="header-site-logo">
+				<a href="https://www.fortcollins.gov/Home"  lang="en-US">
+					<span class="visuallyhidden">
+					City of Fort Collins - Home - Logo
+					</span>
+				</a>
+			</div>
+      
+		    <div class="mobile-search-btn js-element">
+		        <button><i aria-hidden="true"></i><span class="mobile-search-btn-text"><span class="visuallyhidden">Open </span>Search</span></button>
+		    </div>
+		    <div class="header-website-settings">
+                <button id="btn-mob-nav">
+                    <i aria-hidden="true"></i><span class="side-menu-btn-text">Menu</span>
+                </button>
+        	</div>
+          <div class="navigation-outer-container">
+	<div id="nav" role="navigation" class="navigation-container  navigation-container-option-8" data-menu-type="horizontal" aria-label="primary">
+        <div class="grid">
+            <div class="col-xs-12">              
+                <ul class="sf-menu mega-menu" id="sc-main-menu"><li class="nav-section-quarters-1   first-item nav-item-seq-1">
+<a href="https://www.fortcollins.gov/Activities" class="nav-level-1 nav-has-children"  target="">
+	<i class="item-icon" aria-hidden="true"></i><span class="item-text">Activities</span>
+</a>
+<button class="mobnav-subarrow" ><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="second-level-container ch-9" aria-label="Sub-menu">
+
+          
+            <li class="second-level-item  "><a href="https://www.fortcollins.gov/Activities/Sign-Up-for-Classes-and-Events" class=""  target="">Sign Up for Classes and Events</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Activities/Rent-Our-Spaces" class=""  target="_self">Rent Our Spaces</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Activities/Recreation" class="nav-has-children"  target="">Recreation</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Recreation/Recreator"  target="">Recreator</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Recreation/Passes-and-Fees"  target="">Passes and Fees</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Recreation/Programs"  target="">Programs</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Recreation/Bicycling"  target="_self">Bicycling</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Activities/Recreation-Facilities-and-Pools" class=""  target="">Recreation Facilities and Pools</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Activities/Golf" class="nav-has-children"  target="">Golf</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Golf/Courses"  target="_self">Courses</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Golf/Rates-and-Passes"  target="">Rates and Passes</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Activities/Parks-Natural-Areas-and-Trails" class="nav-has-children"  target="">Parks, Natural Areas and Trails</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Parks-Natural-Areas-and-Trails/Parks"  target="">Parks</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Parks-Natural-Areas-and-Trails/Natural-Areas"  target="">Natural Areas</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Parks-Natural-Areas-and-Trails/Trails"  target="">Trails</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Parks-Natural-Areas-and-Trails/Field-Reservations-and-Shelter-Rentals"  target="">Field Reservations and Shelter Rentals</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Activities/Arts-and-Culture" class="nav-has-children"  target="">Arts and Culture</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Arts-and-Culture/Center-for-Creativity"  target="_self">Center for Creativity</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Arts-and-Culture/Gardens-on-Spring-Creek"  target="_blank">Gardens on Spring Creek</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Arts-and-Culture/The-Lincoln-Center"  target="_blank">The Lincoln Center</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Arts-and-Culture/Fort-Collins-Museum-of-Discovery"  target="_blank">Fort Collins Museum of Discovery</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Arts-and-Culture/Art-in-Public-Places"  target="">Art in Public Places</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Activities/Arts-and-Culture/FoCo-Creates-Fort-Fund"  target="">FoCo Creates (Fort Fund)</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Activities/Event-Calendar" class=""  target="_blank">Event Calendar</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Activities/Visitor-Info" class=""  target="_blank">Visitor Info</a></li></ul></li>
+          
+            <li class="nav-section-quarters-2   nav-item-seq-2">
+<a href="https://www.fortcollins.gov/Services" class="nav-level-1 nav-has-children"  target="">Services</a>
+<button class="mobnav-subarrow" ><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="second-level-container ch-16" aria-label="Sub-menu">
+
+          
+            <li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Utilities" class="nav-has-children"  target="">Utilities</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Utilities/Pay-My-Bill"  target="">Pay My Bill</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Utilities/Customer-Support"  target="">Customer Support</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Utilities/StartStop-Service"  target="_blank">Start or Stop Service</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Utilities/Outages"  target="">Outages</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Utilities/Programs-and-Rebates"  target="">Programs and Rebates</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Utilities/Commercial-Utilities"  target="">Commercial Utilities</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Connexion-Broadband" class=""  target="_blank">Connexion (Broadband)</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Trash-and-Recycling" class="nav-has-children"  target="">Trash and Recycling</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Trash-and-Recycling/Recycling-A-to-Z-List"  target="_blank">Recycling A to Z List</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Trash-and-Recycling/Timberline-Recycling-Center"  target="">Timberline Recycling Center</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Trash-and-Recycling/Curbside-Trash-and-Recycling"  target="">Curbside Trash and Recycling</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Transportation-and-Roads" class="nav-has-children"  target="">Transportation and Roads</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Transportation-and-Roads/Transfort"  target="_blank">Transfort</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Transportation-and-Roads/Construction-and-Traffic-Impacts"  target="">Construction and Traffic Impacts</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Transportation-and-Roads/Street-Maintenance"  target="">Street Maintenance</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Transportation-and-Roads/Getting-Around-Town"  target="">Getting Around Town</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Transportation-and-Roads/Transportation-Programs"  target="">Transportation Programs</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Transportation-and-Roads/Transportation-Planning"  target="">Transportation Planning</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Police-and-Public-Safety" class="nav-has-children"  target="">Police and Public Safety</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Police-and-Public-Safety/Contact-Police"  target="">Contact Police</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Police-and-Public-Safety/Online-Crime-Reporting"  target="">Online Crime Reporting</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Police-and-Public-Safety/Police-Services"  target="">Police Services</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Police-and-Public-Safety/Police-Recruiting"  target="">Police Recruiting</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Police-and-Public-Safety/Emergency-Preparedness"  target="">Emergency Preparedness</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Police-and-Public-Safety/Poudre-Fire-Authority"  target="_blank">Poudre Fire Authority</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Parking" class="nav-has-children"  target="">Parking</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Parking/Pay-Your-Parking-Ticket"  target="">Pay Your Parking Ticket</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Parking/Where-to-Park"  target="">Where to Park</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Parking/Parking-Permits"  target="">Parking Permits</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Parking/Parking-Rules"  target="">Parking Rules</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Parking/Residential-Parking-Permit-Program-RP3"  target="">Residential Parking Permit Program (RP3)</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Parking/Downtown-Parking-Management-Updates"  target="_blank">Downtown Parking Management Updates</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Home-Improvements" class=""  target="">Home Improvements</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Development-Review" class=""  target="_self">Development Review</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Housing" class="nav-has-children"  target="">Housing</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Housing/Rental-Housing"  target="">Rental Housing</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Housing/In-Your-Neighborhood"  target="">In Your Neighborhood</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Housing/Mobile-Homes"  target="">Mobile Homes</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Housing/Affordable-Housing"  target="">Affordable Housing</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Housing/Short-Term-Rentals"  target="">Short-Term Rentals</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Housing/Homelessness"  target="">Homelessness</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Housing/Historic-Preservation"  target="_self">Historic Preservation</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Historic-Preservation" class=""  target="">Historic Preservation</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Code-Compliance" class=""  target="_self">Code Compliance</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Forestry" class=""  target="">Forestry</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Cemeteries" class=""  target="">Cemeteries</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Permits-and-Licensing" class=""  target="_self">Permits and Licensing</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Assistance-Programs-and-Grants" class="nav-has-children"  target="">Assistance Programs and Grants</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Assistance-Programs-and-Grants/Residential-Assistance-Programs"  target="">Residential Assistance Programs</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Services/Assistance-Programs-and-Grants/BusinessNonprofit-Assistance-Programs"  target="">Business/Nonprofit Assistance Programs</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Services/Other-Services" class=""  target="_self">Other Services</a></li></ul></li>
+          
+            <li class="nav-section-quarters-3   nav-item-seq-3">
+<a href="https://www.fortcollins.gov/Government" class="nav-level-1 nav-has-children"  target="">Government</a>
+<button class="mobnav-subarrow" ><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="second-level-container ch-13" aria-label="Sub-menu">
+
+          
+            <li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/City-Council" class="nav-has-children"  target="">City Council</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/City-Council/Council-Meetings"  target="">Council Meetings</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/City-Council/Council-Subcommittees"  target="">Council Subcommittees</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/City-Manager" class="nav-has-children"  target="">City Manager</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/City-Manager/City-Managers-Quarterly-Report"  target="">City Manager's Quarterly Report</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/Records-and-Documents" class="nav-has-children"  target="">Records and Documents</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Records-and-Documents/Public-Records"  target="">Public Records</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Records-and-Documents/Public-Notices"  target="">Public Notices</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Records-and-Documents/Agendas"  target="_blank">Agendas</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Records-and-Documents/Maps-and-GIS"  target="_blank">Maps and GIS</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/Elections" class=""  target="">Elections</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/Municipal-Court" class="nav-has-children"  target="">Municipal Court</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Municipal-Court/Pay-Your-Ticket"  target="">Pay Your Ticket</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Municipal-Court/Jury-Duty"  target="">Jury Duty</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/Boards-and-Commissions" class=""  target="">Boards and Commissions</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/City-Code-and-Charter" class=""  target="">City Code and Charter</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/City-Attorney" class=""  target="">City Attorney</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/City-Careers" class=""  target="">City Careers</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/Get-Involved" class="nav-has-children"  target="">Get Involved</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Get-Involved/Volunteer"  target="">Volunteer</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Get-Involved/OurCity-Online-Engagement"  target="_blank">OurCity Online Engagement</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Get-Involved/Community-Survey"  target="">Community Survey</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/City-Plans-and-Projects" class="nav-has-children"  target="">City Plans and Projects</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/City-Plans-and-Projects/City-Plans"  target="">City Plans</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/City-Plans-and-Projects/Public-Improvement-Projects"  target="">Public Improvement Projects</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/Budget-and-Finance" class="nav-has-children"  target="">Budget and Finance</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Budget-and-Finance/Budget"  target="">Budget</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Budget-and-Finance/Financial-Reports"  target="_self">Financial Reports</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Government/Contact-Us" class="nav-has-children"  target="">Contact Us</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Contact-Us/Access-Fort-Collins"  target="_blank">Access Fort Collins</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Government/Contact-Us/Department-Directory"  target="_self">Department Directory</a></li></ul></li></ul></li>
+          
+            <li class="nav-section-quarters-4   nav-item-seq-4">
+<a href="https://www.fortcollins.gov/Business" class="nav-level-1 nav-has-children"  target="">Business</a>
+<button class="mobnav-subarrow" ><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="second-level-container ch-6" aria-label="Sub-menu">
+
+          
+            <li class="second-level-item  "><a href="https://www.fortcollins.gov/Business/Business-Resources-and-Support" class="nav-has-children"  target="">Business Resources and Support</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Business/Business-Resources-and-Support/Starting-Your-Business"  target="">Starting Your Business</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Business/Business-Resources-and-Support/Growing-Your-Business"  target="">Growing Your Business</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Business/Building-and-Development" class="nav-has-children"  target="">Building and Development</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Business/Building-and-Development/Building-Services"  target="">Building Services</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Business/Building-and-Development/Development-Review"  target="">Development Review</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Business/Commercial-Utilities" class=""  target="_self">Commercial Utilities</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Business/Permits-and-Licensing" class="nav-has-children"  target="">Permits and Licensing</a><button class="mobnav-subarrow-child"><i aria-hidden="true"></i><span class="visuallyhidden opensubmenu text">Sub-menu</span></button>
+<ul class="third-level-container" aria-label="Sub-menu">
+          
+            <li class="third-level-item  "><a href="https://www.fortcollins.gov/Business/Permits-and-Licensing/Building-Permits"  target="">Building Permits</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Business/Permits-and-Licensing/BusinessSales-Tax-License"  target="_self">Business/Sales Tax License</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Business/Permits-and-Licensing/Liquor-License"  target="">Liquor License</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Business/Permits-and-Licensing/Marijuana-License"  target="">Marijuana License</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Business/Permits-and-Licensing/Special-Event-Permits"  target="">Special Event Permits</a></li><li class="third-level-item  "><a href="https://www.fortcollins.gov/Business/Permits-and-Licensing/Other-Licenses-and-Permits"  target="">Other Licenses and Permits</a></li></ul></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Business/Pay-Sales-Tax" class=""  target="_self">Pay Sales Tax</a></li><li class="second-level-item  "><a href="https://www.fortcollins.gov/Business/Bids-and-Contracts" class=""  target="">Bids and Contracts</a></li></ul></li>
+          
+            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+			
+			<div class="header-search-control-container" id="header-search">
+				<div class="search-inner-container">
+					<div class="sc-search-panel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl08_btnSearch&#39;)">
+	<label for="ctl08_txtSearch" id="ctl08_lblSearch" class="sc-search-label">Search</label><input name="ctl08$txtSearch" type="text" id="ctl08_txtSearch" class="sc-search-text" placeholder="What are you looking for?" /><input type="submit" name="ctl08$btnSearch" value="Search" id="ctl08_btnSearch" class="sc-search-button" />
+</div>
+					<div role="status" id="predictiveResults"></div>
+				</div>
+			</div>
+    </div>
+</div>
+
+            
+            </header>
+            <div class="content-outer-container">
+                <div id="main" role="main" class="main-outer-container no-background clearfix">
+                        <div class="content-main-container">
+                                                    
+                            <!-- OC Layout Element Conent Template -->
+                            <!--normalTemplateStart--><div class="visuallyhidden"><h1 class='oc-page-title '>Home</h1></div><div id="main-content"><section class="row-index-1"><div class="row-container full-width clearfix"><div class="row-content-container fixed-width clearfix"><div class="feature-background-blurb" ></div></div></div></section><section class="row-index-2"><div class="row-container full-width clearfix"><div class="row-content-container fixed-width clearfix">
+<div class="do-it-online do-it-online-format-1 top-task-homepage top-task-homepage-format-1 clearfix" data-total-results="3"><div class="grid"><div class="col-xs-12 col-m-6 col-lg-4">
+			<a href="https://www.fortcollins.gov/Services/Utilities" title="Utilities" class="profile-list item-0" target="_self" >
+				<i class="item-icon utilities" aria-hidden="true"></i>
+				<h2>Utilities</h2>
+				<p>Municipal utilities providing water, wastewater, stormwater and electric services.</p>
+			</a>
+		</div><div class="col-xs-12 col-m-6 col-lg-4">
+			<a href="https://www.fortcollins.gov/Activities" title="Recreation and Open Spaces" class="profile-list item-1" target="_self" >
+				<i class="item-icon parks-recreation" aria-hidden="true"></i>
+				<h2>Recreation and Open Spaces</h2>
+				<p>Discover local parks, gardens and recreational facilities, register for a camp and book a facility.</p>
+			</a>
+		</div><div class="col-xs-12 col-m-6 col-lg-4">
+			<a href="https://www.fortcollins.gov/Activities/Arts-and-Culture" title="Arts and Culture" class="profile-list item-2" target="_self" >
+				<i class="item-icon arts-culture" aria-hidden="true"></i>
+				<h2>Arts and Culture</h2>
+				<p>Fostering an inclusive, culturally rich, creatively vibrant and arts-engaged community.</p>
+			</a>
+		</div></div></div>
+
+</div></div></section><section class="row-index-3"><div class="row-container full-width clearfix"><div class="row-content-container fixed-width clearfix">
+<div class="do-it-online do-it-online-format-10 top-task-homepage top-task-homepage-format-10 clearfix" data-total-results="6"><div class="grid"><div class="col-xs-12 col-m-4 col-lg-2">
+			<a href="https://www.fortcollins.gov/Government/City-Careers" title="Careers" class="profile-list item-0" target="_self" >
+				<i class="item-icon careers" aria-hidden="true"></i>
+				<h2>Careers</h2>
+			</a>
+		</div><div class="col-xs-12 col-m-4 col-lg-2">
+			<a href="https://www.fortcollins.gov/Government/City-Council/Council-Meetings" title="Council Meetings" class="profile-list item-1" target="_self" >
+				<i class="item-icon council-meetings" aria-hidden="true"></i>
+				<h2>Council Meetings</h2>
+			</a>
+		</div><div class="col-xs-12 col-m-4 col-lg-2">
+			<a href="https://www.fortcollins.gov/Business/Sales-Tax" title="Sales Tax" class="profile-list item-2" target="_self" >
+				<i class="item-icon sales-tax" aria-hidden="true"></i>
+				<h2>Sales Tax</h2>
+			</a>
+		</div><div class="col-xs-12 col-m-4 col-lg-2">
+			<a href="https://www.fortcollins.gov/Government/Contact-Us" title="Contact Us" class="profile-list item-3" target="_self" >
+				<i class="item-icon contact-us" aria-hidden="true"></i>
+				<h2>Contact Us</h2>
+			</a>
+		</div><div class="col-xs-12 col-m-4 col-lg-2">
+			<a href="https://www.fortcollins.gov/Business/Building-and-Development/Building-Services" title="Building Services" class="profile-list item-4" target="_self" >
+				<i class="item-icon building-services" aria-hidden="true"></i>
+				<h2>Building Services</h2>
+			</a>
+		</div><div class="col-xs-12 col-m-4 col-lg-2">
+			<a href="https://www.fortcollins.gov/Services/Police-and-Public-Safety/General-Police-Information-and-Directory" title="Police Services" class="profile-list item-5" target="_self" >
+				<i class="item-icon police" aria-hidden="true"></i>
+				<h2>Police Services</h2>
+			</a>
+		</div></div></div>
+
+</div></div></section><section class="row-index-4"><div class="row-container full-width clearfix"><div class="row-content-container fixed-width clearfix"><div data-oc-tabs-name="tabs" class="tab-group profile-featured-links"><div id="tabs-body" class="tab-group-body"><div class="no-js-element clearfix tabs-header for-panel-1 tab-type-default spotlight-tab">
+    <h1 class="item-text" >Spotlights</h1>
+</div>
+<div id="panel-1" class="tabs-panel clearfix tab-type-default spotlight-tab">
+    <div class="wysiwyg-content body-content" ><h1 class="list_heading">Spotlight</h1>
+<p>
+
+<div class="grid">
+<div class="col-xs-12 col-s-6 col-lg-4">
+						<a href="https://www.fortcollins.gov/News-Articles/News/2026-Q1/City-of-Fort-Collins-Adopts-Fire-Restrictions" class="profile-featured-panel clearfix" target="_self" >
+							<h2>City of Fort Collins Adopts Fire Restrictions</h2>
+							<p class="panel-image">
+       <picture>
+  <source media="(min-width: 992px)" srcset="/files/sharedassets/city/v/1/03-news-releases-images-amp-linked-files/2026-news-releases/wildfirepfa.jpg?dimension=homepagefeaturecontent&w=345&h=189">
+  <source media="(min-width: 768px)" srcset="/files/sharedassets/city/v/1/03-news-releases-images-amp-linked-files/2026-news-releases/wildfirepfa.jpg?dimension=homepagefeaturecontent&w=330&h=188">
+  <source srcset="/files/sharedassets/city/v/1/03-news-releases-images-amp-linked-files/2026-news-releases/wildfirepfa.jpg?dimension=homepagefeaturecontent&w=480&h=274">
+  <img class="large-thumbnail-image" src="/files/sharedassets/city/v/1/03-news-releases-images-amp-linked-files/2026-news-releases/wildfirepfa.jpg?dimension=homepagefeaturecontent&w=480&h=274" alt=""/>
+  </picture></p>
+							<p class="panel-text">Stage 1 fire restrictions went into effect on March 25.</p>
+						</a>
+				</div><div class="col-xs-12 col-s-6 col-lg-4">
+						<a href="https://www.fortcollins.gov/Government/City-Manager/City-Managers-Quarterly-Report" class="profile-featured-panel clearfix" target="_self" >
+							<h2>2025 Report to the Community</h2>
+							<p class="panel-image">
+       <picture>
+  <source media="(min-width: 992px)" srcset="/files/sharedassets/city/v/2/01-featured-content-spotlights-alerts-etc/2026-spotlights/trees-with-mountain-and-sunset-in-background.png?dimension=homepagefeaturecontent&w=345&h=189">
+  <source media="(min-width: 768px)" srcset="/files/sharedassets/city/v/2/01-featured-content-spotlights-alerts-etc/2026-spotlights/trees-with-mountain-and-sunset-in-background.png?dimension=homepagefeaturecontent&w=330&h=188">
+  <source srcset="/files/sharedassets/city/v/2/01-featured-content-spotlights-alerts-etc/2026-spotlights/trees-with-mountain-and-sunset-in-background.png?dimension=homepagefeaturecontent&w=480&h=274">
+  <img class="large-thumbnail-image" src="/files/sharedassets/city/v/2/01-featured-content-spotlights-alerts-etc/2026-spotlights/trees-with-mountain-and-sunset-in-background.png?dimension=homepagefeaturecontent&w=480&h=274" alt=""/>
+  </picture></p>
+							<p class="panel-text">Check out the Report to the Community for a look at last year's top accomplishments and projects.</p>
+						</a>
+				</div><div class="col-xs-12 col-s-6 col-lg-4">
+						<a href="https://fortcollinsco.citysourced.com/" class="profile-featured-panel clearfix" target="_blank" >
+							<h2>Access Fort Collins</h2>
+							<p class="panel-image">
+       <picture>
+  <source media="(min-width: 992px)" srcset="/files/sharedassets/city/v/2/01-featured-content-spotlights-alerts-etc/2025-spotlights/25-28001-afc-advertising-updates_newsletter-image-v1-1-1.jpg?dimension=homepagefeaturecontent&w=345&h=189">
+  <source media="(min-width: 768px)" srcset="/files/sharedassets/city/v/2/01-featured-content-spotlights-alerts-etc/2025-spotlights/25-28001-afc-advertising-updates_newsletter-image-v1-1-1.jpg?dimension=homepagefeaturecontent&w=330&h=188">
+  <source srcset="/files/sharedassets/city/v/2/01-featured-content-spotlights-alerts-etc/2025-spotlights/25-28001-afc-advertising-updates_newsletter-image-v1-1-1.jpg?dimension=homepagefeaturecontent&w=480&h=274">
+  <img class="large-thumbnail-image" src="/files/sharedassets/city/v/2/01-featured-content-spotlights-alerts-etc/2025-spotlights/25-28001-afc-advertising-updates_newsletter-image-v1-1-1.jpg?dimension=homepagefeaturecontent&w=480&h=274" alt=""/>
+  </picture></p>
+							<p class="panel-text">An easy way to send your questions, comments and service requests directly to City staff.</p>
+						</a>
+				</div>
+</div>
+
+
+
+
+
+</p>
+
+</div>
+    
+    
+</div><div class="no-js-element clearfix tabs-header for-panel-2 tab-type-default news-tab">
+    <h1 class="item-text" >News</h1>
+</div>
+<div id="panel-2" class="tabs-panel clearfix tab-type-default news-tab">
+    <div class="wysiwyg-content body-content" ><h1 class="list_heading">News</h1>
+<p>
+<div class="profile-listing-container profile-news-listing-container profile-news-listing-option-1 clearfix"><div class="profile-tabbed-listing profile-news-listing clearfix" data-total-results="35">
+<div class="grid">
+        
+
+<div class="col-xs-12 col-m-6 col-lg-4">
+	<a href="https://www.fortcollins.gov/News-Articles/News/2026-Q1/City-of-Fort-Collins-Receives-National-Vision-Zero-for-Youth-Leadership-Award" title="City of Fort Collins Receives National Vision Zero Award" class="profile-list item-0 homepage-show" >		
+		
+       <picture>
+  <source media="(min-width: 992px)" srcset="/files/sharedassets/city/v/2/planning-development-amp-transportation/fc-moves/vision-zero.jpg?dimension=homepagelisting&w=345&h=189">
+  <source media="(min-width: 768px)" srcset="/files/sharedassets/city/v/2/planning-development-amp-transportation/fc-moves/vision-zero.jpg?dimension=homepagelisting&w=496&h=328">
+  <source srcset="/files/sharedassets/city/v/2/planning-development-amp-transportation/fc-moves/vision-zero.jpg?dimension=homepagelisting&w=480&h=316">
+  <img class="large-thumbnail-image" src="/files/sharedassets/city/v/2/planning-development-amp-transportation/fc-moves/vision-zero.jpg?dimension=homepagelisting&w=496&h=328" alt=""/>
+  </picture>
+		<h2>City of Fort Collins Receives National Vision Zero Award</h2>
+		<p class="published-on small-text">Published on April 02, 2026</p>
+		<p>The City of Fort Collins has been named a recipient of the 2026 Vision Zero for Youth U.S. Leadership Award by the National Center for Safe Routes to School, recognizing the community’s sustained commitment to improving safety for children and youth who walk and bike.</p>
+	</a>
+</div><div class="col-xs-12 col-m-6 col-lg-4">
+	<a href="https://www.fortcollins.gov/News-Articles/News/2026-Q1/City-of-Fort-Collins-earns-recognition-from-global-environmental-group" title="City of Fort Collins earns recognition from global environmental group" class="profile-list item-1 homepage-show" >		
+		
+       <picture>
+  <source media="(min-width: 992px)" srcset="/files/sharedassets/city/v/2/04-images-amp-icons/25-28201-new-website-image-suite-size-480x316/city-hall-flowers-480x316_1.jpg?dimension=homepagelisting&w=345&h=189">
+  <source media="(min-width: 768px)" srcset="/files/sharedassets/city/v/2/04-images-amp-icons/25-28201-new-website-image-suite-size-480x316/city-hall-flowers-480x316_1.jpg?dimension=homepagelisting&w=496&h=328">
+  <source srcset="/files/sharedassets/city/v/2/04-images-amp-icons/25-28201-new-website-image-suite-size-480x316/city-hall-flowers-480x316_1.jpg?dimension=homepagelisting&w=480&h=316">
+  <img class="large-thumbnail-image" src="/files/sharedassets/city/v/2/04-images-amp-icons/25-28201-new-website-image-suite-size-480x316/city-hall-flowers-480x316_1.jpg?dimension=homepagelisting&w=496&h=328" alt=""/>
+  </picture>
+		<h2>City of Fort Collins earns recognition from global environmental group</h2>
+		<p class="published-on small-text">Published on March 18, 2026</p>
+		<p>The City of Fort Collins scored an “A” for its environmental data measurement and climate action.</p>
+	</a>
+</div><div class="col-xs-12 col-m-6 col-lg-4">
+	<a href="https://www.fortcollins.gov/News-Articles/News/2026-Q1/Ice-Rink-Renovations-Planned-at-Edora-Pool-Ice-Center" title="Ice Rink Renovations Planned at Edora Pool Ice Center" class="profile-list item-2 homepage-show" >		
+		
+       <picture>
+  <source media="(min-width: 992px)" srcset="/files/sharedassets/city/v/1/02-events/epicfront.png?dimension=homepagelisting&w=345&h=189">
+  <source media="(min-width: 768px)" srcset="/files/sharedassets/city/v/1/02-events/epicfront.png?dimension=homepagelisting&w=496&h=328">
+  <source srcset="/files/sharedassets/city/v/1/02-events/epicfront.png?dimension=homepagelisting&w=480&h=316">
+  <img class="large-thumbnail-image" src="/files/sharedassets/city/v/1/02-events/epicfront.png?dimension=homepagelisting&w=496&h=328" alt=""/>
+  </picture>
+		<h2>Ice Rink Renovations Planned at Edora Pool Ice Center</h2>
+		<p class="published-on small-text">Published on March 18, 2026</p>
+		<p>The ice rinks at Edora Pool Ice Center (EPIC) will temporarily close beginning April 20, 2026, for a series of renovations designed to improve facility operations, energy efficiency and the overall skating experience.</p>
+	</a>
+</div>
+
+
+</div>
+</div>
+<a href="https://www.fortcollins.gov/News-Articles" class="panel-button">View More News</a></div>
+        
+
+
+
+</p>
+
+</div>
+    
+    
+</div><div class="no-js-element clearfix tabs-header for-panel-3 tab-type-default events-tab">
+    <h1 class="item-text" >Events</h1>
+</div>
+<div id="panel-3" class="tabs-panel clearfix tab-type-default events-tab">
+    <div class="wysiwyg-content body-content" ><h1 class="list_heading">Events</h1>
+<p>
+<div class="profile-listing-container profile-events-listing-container profile-events-listing-option-1 clearfix"><div class="profile-tabbed-listing profile-events-listing clearfix" data-total-results="33">
+<div class="grid">
+        
+        
+
+<div class="col-xs-12 col-m-6 col-lg-4">
+	<a href="https://www.fortcollins.gov/Events/2026-Events/2026-Q2/Arts-Culture/C4C-Life-Beyond-Young-Adult-Cancer" title="Community Exhibition: Through the Lens: Life Beyond Young Adult Cancer" class="profile-list item-0 homepage-show  " >		
+		
+       <picture>
+  <source media="(min-width: 992px)" srcset="/files/sharedassets/city/v/1/02-events/2026-events/a-amp-c/life-beyond-cancer.png?dimension=homepagelisting&w=345&h=189">
+  <source media="(min-width: 768px)" srcset="/files/sharedassets/city/v/1/02-events/2026-events/a-amp-c/life-beyond-cancer.png?dimension=homepagelisting&w=496&h=328">
+  <source srcset="/files/sharedassets/city/v/1/02-events/2026-events/a-amp-c/life-beyond-cancer.png?dimension=homepagelisting&w=480&h=316">
+  <img class="large-thumbnail-image" src="/files/sharedassets/city/v/1/02-events/2026-events/a-amp-c/life-beyond-cancer.png?dimension=homepagelisting&w=496&h=328" alt=""/>
+  </picture>
+		<span class="list-item-block-date" aria-hidden="true"><span class="part-date">08</span>
+<span class="part-month">Apr</span>
+<span class="part-year">2026</span></span>
+		<h2>Community Exhibition: Through the Lens: Life Beyond Young Adult Cancer</h2>
+		<p class="event-date small-text">April 08, 2026</p>
+		<p>"Through the Lens: Life Beyond Cancer,” features the artwork of 16 young adult cancer survivors from across the country.  Each artist tells their personal story revealing lived experiences of identity, loss, grief, struggles, hope, and transformation - perspectives that are often unseen in traditional cancer narratives.</p>
+	</a>
+</div><div class="col-xs-12 col-m-6 col-lg-4">
+	<a href="https://www.fortcollins.gov/Events/2026-Events/2026-Q1/Arts-Culture/Exhibition-Under-Pressure-2026-National-Printmaking-Exhibition" title="Exhibition: Under Pressure: 2026 National Printmaking Exhibition" class="profile-list item-1 homepage-show  " >		
+		
+       <picture>
+  <source media="(min-width: 992px)" srcset="/files/sharedassets/city/v/1/03-news-releases-images-amp-linked-files/2026-news-releases/24-moprint-exhibit-image-480x316.jpg?dimension=homepagelisting&w=345&h=189">
+  <source media="(min-width: 768px)" srcset="/files/sharedassets/city/v/1/03-news-releases-images-amp-linked-files/2026-news-releases/24-moprint-exhibit-image-480x316.jpg?dimension=homepagelisting&w=496&h=328">
+  <source srcset="/files/sharedassets/city/v/1/03-news-releases-images-amp-linked-files/2026-news-releases/24-moprint-exhibit-image-480x316.jpg?dimension=homepagelisting&w=480&h=316">
+  <img class="large-thumbnail-image" src="/files/sharedassets/city/v/1/03-news-releases-images-amp-linked-files/2026-news-releases/24-moprint-exhibit-image-480x316.jpg?dimension=homepagelisting&w=496&h=328" alt=""/>
+  </picture>
+		<span class="list-item-block-date" aria-hidden="true"><span class="part-date">08</span>
+<span class="part-month">Apr</span>
+<span class="part-year">2026</span></span>
+		<h2>Exhibition: Under Pressure: 2026 National Printmaking Exhibition</h2>
+		<p class="event-date small-text">April 08, 2026</p>
+		<p>— The Lincoln Center Art Gallery will participate in Colorado’s Month of Printmaking (Mo’Print), March 6–April 24, 2026, by presenting Under Pressure: 2026 National Printmaking Exhibition, a nationally juried exhibition of artworks consisting of any printmaking media.</p>
+	</a>
+</div><div class="col-xs-12 col-m-6 col-lg-4">
+	<a href="https://www.fortcollins.gov/Events/2026-Events/2026-Q2/Outdoor-Vendor-101-Class-April-2026" title="April 8: Outdoor Vendor 101 Class" class="profile-list item-2 homepage-show  " >		
+		
+       <picture>
+  <source media="(min-width: 992px)" srcset="/files/sharedassets/city/v/2/financial-services/sales-tax/food-truck-vendor.jpg?dimension=homepagelisting&w=345&h=189">
+  <source media="(min-width: 768px)" srcset="/files/sharedassets/city/v/2/financial-services/sales-tax/food-truck-vendor.jpg?dimension=homepagelisting&w=496&h=328">
+  <source srcset="/files/sharedassets/city/v/2/financial-services/sales-tax/food-truck-vendor.jpg?dimension=homepagelisting&w=480&h=316">
+  <img class="large-thumbnail-image" src="/files/sharedassets/city/v/2/financial-services/sales-tax/food-truck-vendor.jpg?dimension=homepagelisting&w=496&h=328" alt=""/>
+  </picture>
+		<span class="list-item-block-date" aria-hidden="true"><span class="part-date">08</span>
+<span class="part-month">Apr</span>
+<span class="part-year">2026</span></span>
+		<h2>April 8: Outdoor Vendor 101 Class</h2>
+		<p class="event-date small-text">April 08, 2026</p>
+		<p>This info class for outdoor vendors covers everything from municipal code to required inspections, location, application process and more. Additionally, hear from partners like Poudre Fire Authority, Larimer County Health Department and CSU Extension.</p>
+	</a>
+</div>
+
+
+</div>
+</div>
+<a href="https://www.fortcollins.gov/Events/Events-Directory" class="panel-button">View More Events</a></div>
+        
+        
+
+
+
+</p>
+
+</div>
+    
+    
+</div></div></div></div></div></section><section class="row-index-5"><div class="row-container full-width clearfix"><div class="row-content-container fixed-width clearfix">
+<div class="profile-cta-spotlight">
+<div class="grid">
+
+
+
+
+<style>
+	.profile-cta-spotlight {
+		text-align: center;
+	}
+</style>
+</div>
+</div>
+
+
+
+</div></div></section></div><!--normalTemplateEnd-->
+                        </div>
+                        <div class="back-to-top-container text-center">
+                            <a href="#body-top" id="back-to-top"><i aria-hidden="true"></i><span class="js-visuallyhidden">Back to top</span></a>
+                        </div>
+                </div>
+            </div><!--groupTemplateEnd-->
+            <footer>
+                
+                    <div class="footer-outer-container footer-first-row">
+                        <div class="footer-container clearfix">
+                            <div class="grid grid-pad">
+                                <div class="col-xs-12 col-s-6 col-m-3 col-lg-3 contact-us" >
+	<h3 class="footer-title">Contact Us</h3>
+	<p><a href="https://www.fortcollins.gov/Department-Directory" target="_blank">Department Directory</a></p>
+<p><a href="https://fortcollinsco.citysourced.com/" target="_blank">Access Fort Collins</a></p>
+<p><strong>City Hall:</strong></p>
+<p>300 Laporte Ave.</p>
+<p>Fort Collins, CO 80521</p>
+<p><a href="https://maps.app.goo.gl/vnHeThmoTgEn1CT59" target="_blank">View on Map</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+	<ul class="footer-links with-icons ">   </ul>
+	<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+</div><div class="col-xs-12 col-s-6 col-m-3 col-lg-3 share-connect" >
+	<h3 class="footer-title">Social Media</h3>
+	
+	<ul class="footer-links with-icons social-media-links">  <li class="footer-link-facebook">
+	<a href="https://www.facebook.com/fortcollinsgov" target="_blank"  >
+<i aria-hidden="true"></i>Facebook
+</a>
+</li>
+          <li class="footer-link-instagram">
+	<a href="http://instagram.com/fortcollinsgov" target="_blank"  >
+<i aria-hidden="true"></i>Instagram
+</a>
+</li>
+          <li class="footer-link-twitter">
+	<a href="http://www.x.com/fortcollinsgov" target="_blank"  >
+<i aria-hidden="true"></i>X
+</a>
+</li>
+          <li class="footer-link-youtube">
+	<a href="http://www.youtube.com/user/cityoffortcollins" target="_blank"  >
+<i aria-hidden="true"></i>YouTube
+</a>
+</li>
+          <li class="footer-link-linkedin">
+	<a href="https://www.linkedin.com/company/city-of-fort-collins" target="_blank"  >
+<i aria-hidden="true"></i>LinkedIn
+</a>
+</li>
+           </ul>
+	
+</div><div class="col-xs-12 col-s-6 col-m-3 col-lg-3 link-section" >
+	<h3 class="footer-title">Stay Informed</h3>
+	
+	<ul class="footer-links with-icons ">  <li class="footer-link-">
+	<a href="https://apps.fcgov.com/subscriptions/" target="_blank"  >
+<i aria-hidden="true"></i>Subscribe to a Newsletter
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://ourcity.fcgov.com/" target="_blank"  >
+<i aria-hidden="true"></i>Share Feedback on City Projects
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://fortcollinsco.prelive.opencities.com/News-Articles" target="_blank"  >
+<i aria-hidden="true"></i>Check Out the Latest News
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://fortcollinsco.prelive.opencities.com/Events-Directory" target="_blank"  >
+<i aria-hidden="true"></i>Browse Upcoming City Events
+</a>
+</li>
+          <li class="footer-link-">
+	
+</li>
+          <li class="footer-link-">
+	<a href="https://www.fortcollins.gov/Uncategorized-Content/Fort-Collins-Overview" target="_blank"  >
+<i aria-hidden="true"></i>Learn More About Fort Collins
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://www.fortcollins.gov/Uncategorized-Content/Mission-Vision-Values" target="_self"  >
+<i aria-hidden="true"></i>Our Mission, Vision, Values
+</a>
+</li>
+           </ul>
+	
+</div><div class="col-xs-12 col-s-6 col-m-3 col-lg-3 link-section" >
+	<h3 class="footer-title">Community Partners</h3>
+	
+	<ul class="footer-links with-icons ">  <li class="footer-link-">
+	<a href="https://www.larimer.gov/" target="_blank"  >
+<i aria-hidden="true"></i>Larimer County
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://www.poudre-fire.org/" target="_blank"  >
+<i aria-hidden="true"></i>Poudre Fire Authority
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://poudrelibraries.org/" target="_blank"  >
+<i aria-hidden="true"></i>Poudre Libraries
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://www.colostate.edu/" target="_blank"  >
+<i aria-hidden="true"></i>Colorado State University
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://www.frontrange.edu/" target="_blank"  >
+<i aria-hidden="true"></i>Front Range Community College
+</a>
+</li>
+          <li class="footer-link-">
+	<a href="https://www.psdschools.org/" target="_blank"  >
+<i aria-hidden="true"></i>Poudre School District
+</a>
+</li>
+           </ul>
+	
+</div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="footer-outer-container footer-second-row">
+                    <div class="footer-container clearfix">
+                        <div class="grid grid-pad footer-secondary-links">
+                            <div class="col-xs-12 col-m-7">
+                                
+                                    <div>
+                                        <a href="https://www.fortcollins.gov/Government/City-Attorney/Disclaimer-and-Copyright" target="_self">Disclaimer and Copyright</a>&nbsp;| 
+                                        <a href="https://www.fortcollins.gov/Government/City-Attorney/Privacy" target="_self">Privacy</a>&nbsp;| 
+                                        <a href="https://www.fortcollins.gov/Government/City-Attorney/Non-Discrimination-Policies" target="_self">Non-Discrimination</a>&nbsp;| 
+                                        
+                                        <!-- UPDATED: Made link text more descriptive for screen readers -->
+                                        <a href="https://www.fortcollins.gov/Government/City-Attorney/Accessibility" target="_self">
+                                            Digital Accessibility Information
+                                        </a>
+                                        <!-- END UPDATE -->
+                                        
+                                        &nbsp;| 
+                                        <a href="https://www.fortcollins.gov/Government/City-Attorney/Social-Media-Disclaimer" target="_blank">Social Media</a>&nbsp;| 
+                                        <a href="https://www.fortcollins.gov/Site-Footer/Sitemap" target="_self">Sitemap</a>
+                                    </div>
+                            </div>
+                            <div class="col-xs-12 col-m-5 powered-by">
+                                <div class="right">
+                                    &copy; 2026 City of Fort Collins&nbsp;|&nbsp;<span class="powered-by">Powered by <a href="https://granicus.com/solution/govaccess/opencities/" target="_blank">Granicus</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="/files/oc-resources/3e5cc29d-9607-4410-92de-1fffffd2ed21/JsTextSnippets.js?ocsvclang=en-US" type="text/javascript"></script><script></script>
+    
+    <!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+
+<script type='text/javascript'>
+
+(function(){var g=function(g){
+
+this.go=function(){var a=document.createElement("script");a.type="text/javascript";a.src=g;document.body&&document.body.appendChild(a)};
+
+this.start=function(){var t=this;"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",function(){t.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){t.go()}):t.go()};};
+
+try{(new g("https://zn3mm1puta2vhz71f-fortcollinsstrategic.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_3Mm1putA2VHZ71F")).start()}catch(i){}})();
+
+</script><div id='ZN_3Mm1putA2VHZ71F'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+
+<!--END WEBSITE FEEDBACK SNIPPET-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EQTZ723D8W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EQTZ723D8W');
+</script>
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+window.__TsmHiddenField = $get('ctl04_seamless_script_manager_TSM');//]]>
+</script>
+</form>
+</body>
+</html>
